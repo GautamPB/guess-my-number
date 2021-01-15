@@ -16,7 +16,7 @@ const playAgain = () => {
     document.getElementById('score').innerHTML = finalScore
     finalScore = ''
     document.getElementById('ans').innerHTML = '?'
-    document.body.style.backgroundColor = '#404040'
+    document.body.style.backgroundColor = '#202020'
     document.getElementById('check').disabled = false
 }
 
@@ -52,5 +52,13 @@ const checkNumber = () => {
         finalScore += '💯 Score: ' + score
         document.getElementById('score').innerHTML = finalScore
         finalScore = ''
+    }
+
+    if (score == 0) {
+        document.getElementById('message').innerHTML =
+            '⛔ You have lost the game!'
+        document.getElementById('check').disabled = true
+        document.getElementById('ans').innerHTML = numberToGuess
+        document.body.style.backgroundColor = 'red'
     }
 }
