@@ -8,24 +8,24 @@
 
 <body>
     <div class="top">
-        <button class="btn">Again!</button>
+        <button onclick="playAgain()" class="btn">Again!</button>
         <p class="range">(Between 1 and 20)</p>
     </div>
     
     <h1 class="header">Guess My Number!</h1>
 
-    <p class="question">?</p>
+    <p class="question" id = 'ans'>?</p>
 
     <div class="collect__input">
         <div class="check__input">
             <input type="number" class="input" min="0" max="20" />
-            <button class="btn check">Check!</button>
+            <button onclick="checkNumber()" class="btn check">Check!</button>
         </div>
 
         <div class="input__description">
-            <h2 class="guessing">Start guessing...</h2>
-            <h2 class="input__score">💯 Score: 20</h2>
-            <h2 class="highscore">🥇 highscore: 0</h2>
+            <h2 class="guessing" id = 'message'>Start guessing...</h2>
+            <h2 class="input__score" id = 'score'>💯 Score: 20</h2>
+            <h2 class="highscore" id = 'highscore'>🥇 Highscore: 0</h2>
         </div>
     </div>
 </body>
